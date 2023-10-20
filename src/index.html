@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/svg/favicon.svg" type="image/svg">
+  <title>main page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div>
+  @include('html/header.html')
+  <main class="main">
+    @include('html/header-swiper.html')
+    @include('html/special-offers.html')
+    <section class="high-rating-section  container">
+      <h2 class="heading">Высокий рейтинг</h2>
+      <ul class="high-rating">
+        @include('html/high-rating.html')
+      </ul>
+        @include('html/high-rating-btn.html')
+  </section>
+    @include('html/sta.html')
+    @include('html/famous-categories.html')
+    @include('html/anseful-articles.html')
+    @include('html/fos.html')
+  </main>
+  <footer class="footer">
+    @include('html/footer.html')
+  </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

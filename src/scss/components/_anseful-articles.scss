@@ -1,0 +1,29 @@
+// Полезное
+
+.anseful-articles-img-slider__slide {
+  height: auto;
+  padding-bottom: 30px;
+}
+
+.anseful-articles-content {
+  @include flex-container();
+  min-height: 640px;
+}
+
+.anseful-articles-text-container {
+  @include card-grow();
+  min-height: 189px;
+  padding: 27px 30px 0 30px;
+}
+
+.anseful-articles-text {
+  line-height: 1.4;
+}
+
+.anseful-articles-btn {
+  margin-top: auto;
+  margin-right: auto;
+}
+.anseful-articles {
+  margin-bottom: 68px;
+}

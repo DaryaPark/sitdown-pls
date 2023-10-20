@@ -1,0 +1,41 @@
+.similar__order{
+padding: 16px;
+}
+
+.similar__swiper-btns {
+  top: -3px;
+}
+.similar {
+  position: relative;
+
+  &__title {
+    margin-bottom: 26px;
+
+    @include tablet {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__article {
+    padding: 14px;
+
+    @include mobile {
+      padding: 20px 16px;
+    }
+  }
+
+  &__swiper-slide {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  &__picture {
+    @include tablet {
+      height: 144px;
+    }
+  }
+}
+

@@ -1,0 +1,69 @@
+@mixin for-background {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+@mixin text16px {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+}
+
+@mixin gray-text14px {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+}
+
+@mixin violet-text16px {
+  font-weight: 400;
+  font-size: 16px;
+  color: #A65CF0;
+}
+
+@mixin btn {
+  font-size: 16px;
+  font-weight: 700;
+  color: #A65CF0;
+  border: 2px solid #A65CF0;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@mixin violet-btn {
+  color: #FFFFFF;
+  padding-left: 36px;
+  padding-right: 36px;
+  background-color: #A65CF0;
+}
+
+@mixin arrow {
+  @include for-background();
+  content: '';
+  background-image: url(../img/svg/arrow.svg);
+  width: 32px;
+  height: 32px;
+}
+
+@mixin title-card {
+  font-size: 24px;
+  font-weight: 400;
+  color: #333333;
+}
+
+@mixin flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin card-grow {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+

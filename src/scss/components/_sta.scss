@@ -1,0 +1,51 @@
+
+// ста блок
+.sta-block-wrapper {
+  position: relative;
+}
+
+.sta-block-section {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.sta-block-picture {
+  display: flex;
+  height: 100%;
+
+  img{
+    width: 100%;
+  }
+}
+
+.sta-block-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-top: 155px;
+  padding-bottom: 150px;
+}
+
+.sta-block-title {
+  font-size: 60px;
+  color: #D5B986;
+  font-family: 'Playfair-Display';
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+
+.sta-block-subtitle {
+  max-width: 508px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 51px;
+}
+
+.sta-block-btn {
+  @include btn();
+  background-color: #A65CF0;
+  color: #FFFFFF;
+  padding: 19px 31px;
+}

@@ -1,0 +1,163 @@
+.card {
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 0 30px;
+
+  @include big-desktop {
+    grid-template-rows: 101px 100px auto;
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  @include tablet {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px 30px;
+  }
+
+  @include small-tablet {
+    gap: 16px 30px;
+  }
+
+  &__item {
+    grid-column: 6 span;
+
+    // слайдер
+    &:nth-child(1) {
+      grid-row: 1/span 2;
+      max-height: 250px;
+      margin-bottom: 15px;
+
+      @include big-desktop {
+        grid-column: 5 span;
+        grid-row: 1/span 2;
+        margin-bottom: 0;
+      }
+
+      @include tablet {
+        grid-column: 6 span;
+      }
+    }
+
+    // мини слайдер
+    &:nth-child(2) {
+      grid-row: 3;
+
+      @include big-desktop {
+        grid-column: 5 span;
+        grid-row: 3/span 2;
+        padding-top: 14px;
+      }
+
+      @include tablet {
+        grid-column: 2 span;
+        padding-top: 0;
+      }
+
+      @include small-tablet {
+        padding-top: 18px;
+        grid-column: 6 span;
+        grid-row: 3;
+      }
+
+      @include mobile {
+        padding-top: 0;
+      }
+    }
+
+    // Цена названи
+    &:nth-child(3) {
+      grid-row: 1/span 3;
+      padding-top: 19px;
+
+      @include big-desktop {
+        grid-column: 4 span;
+        grid-row: 1/span 5;
+        padding-top: 16px;
+      }
+
+      @include tablet {
+        grid-column: 4 span;
+        grid-row: 3/span 2;
+        padding-top: 0;
+      }
+
+      @include small-tablet {
+        grid-row: 4;
+      }
+
+      @include mobile {
+        grid-column: 6 span;
+      }
+    }
+
+    // Описание "Опорный меанизм"
+    &:nth-child(4) {
+      grid-row: 4;
+
+      @include big-desktop {
+        grid-column: 5 span;
+        grid-row: 6;
+      }
+
+      @include tablet {
+        grid-column: 5 span;
+        grid-row: 5;
+      }
+
+      @include small-tablet {
+        grid-row: 6;
+      }
+
+      @include mobile {
+        grid-column: 6 span;
+        }
+    }
+
+    // таблица
+    &:nth-child(5) {
+      grid-row: 4;
+      padding-top: 4px;
+
+      @include big-desktop {
+        grid-column: 4 span;
+        grid-row: 6;
+      }
+
+      @include tablet {
+        grid-column: 6 span;
+        padding-top: 0;
+      }
+
+      @include small-tablet {
+        grid-row: 7;
+        padding-top: 3px;
+      }
+    }
+
+    &:last-child {
+      grid-row: 5;
+      grid-column: 12 span;
+      padding-top: 80px;
+
+      @include big-desktop {
+        grid-column: 9 span;
+        grid-row: 11;
+        padding-top: 70px;
+      }
+
+      @include tablet {
+        grid-column: 6 span;
+        grid-row: 7;
+        padding-top: 0;
+
+      }
+
+      @include small-tablet {
+        grid-row: 11;
+        padding-top: 4px;
+      }
+    }
+  }
+}

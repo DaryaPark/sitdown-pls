@@ -1,0 +1,35 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "vendor";
+
+// подключения компонентов страницы
+@import "./components/benefits";
+@import "./components/header";
+@import "./components/header-swiper";
+@import "./components/special-offers";
+@import "./components/high-rating";
+@import "./components/sta";
+@import "./components/famous-categories";
+@import "./components/anseful-articles";
+@import "./components/fos";
+@import "./components/catalog-grid";
+@import "./components/breadcrumbs";
+@import "./components/catalog-teg";
+@import "./components/catalog-filter";
+@import "./components/catalog-goods";
+@import "./components/card-slider";
+@import "./components/card-info";
+@import "./components/detail-section-1";
+@import "./components/detail-section-2";
+@import "./components/similar";
+@import "./components/cooperation";
+@import "./components/text";
+@import "./components/card-grid";
+@import "./components/modal-window-swiper";
+@import "./components/modal-window-formcard";
+@import "./components/footer";
+@import "./components/break-points";
+

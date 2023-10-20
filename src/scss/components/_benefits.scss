@@ -1,0 +1,148 @@
+body._lock {
+  overflow: hidden;
+}
+
+.heading {
+  line-height: 1.1;
+  font-size: 32px;
+  font-weight: 400;
+  color: #333333;
+  margin-bottom: 26px;
+}
+
+.title {
+  @include title-card();
+}
+
+.text {
+  @include text16px();
+}
+
+a:active, a:focus { outline: none; }
+
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+textarea {resize:none;}
+textarea {resize:vertical;}
+textarea {resize:horizontal;}
+
+.grid-container {
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: initial;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+
+.btn {
+  @include btn();
+  padding: 17px 34px;
+  display: flex;
+  font-weight: 600;
+  transition: background-color .3s ease-in, color .3s ease-in;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active{
+  color:#FFFFFF;;
+}
+
+.btn:hover {
+  background-color: #A65CF0
+}
+
+.btn:focus {
+  background-color: #C998FB;
+}
+
+
+.btn:active {
+  background-color: #7033AC;
+  border-color: #7033AC;
+}
+
+.flex-container {
+  @include flex-container();
+  min-height: 182px;
+  margin-top: auto;
+}
+
+
+.slider-button:after {
+  display: flex;
+  content: '';
+  transition: background .3s ease-in;
+}
+.slider-button-next:after {
+  @include arrow();
+  transform: rotate(0deg);
+}
+
+.slider-button-prev:after {
+  @include arrow();
+  transform: rotate(180deg);
+}
+
+
+.slider-button-next:hover:after,
+.slider-button-prev:hover:after,
+.famous-categories-btn:hover::after,
+.header-search-form__btn:hover:after {
+  background-image: url(../img/svg/arrow-hover.svg);
+}
+
+.slider-button-next:focus:after,
+.slider-button-prev:focus:after,
+.famous-categories-btn:focus::after,
+.header-search-form__btn:focus:after {
+  background-image: url(../img/svg/arrow-focus.svg);
+}
+
+.slider-button-next:active:after,
+.slider-button-prev:active:after,
+.famous-categories-btn:active::after,
+.header-search-form__btn:active:after {
+  background-image: url(../img/svg/arrow-active.svg);
+}
+
+.slider-button-next:hover:after,
+.slider-button-prev:hover:after{
+  background-image: url(../img/svg/arrow-hover.svg);
+}
+
+.slider-button-next,
+.slider-button-prev {
+  width: 100%;
+  right: 0;
+  left: auto;
+  position: relative;
+}
+
+.special-offers-swiper-btn {
+  position: absolute;
+  top: 3px;
+  display: flex;
+  width: 100%;
+}
+
+.special-offers-swiper-btn-wrapper {
+  display: flex;
+  margin-left: auto;
+}
+
+.swiper-button-disabled{
+  filter: grayscale(1);
+}
+
+
+.slider-button-next:after:hover,
+.slider-button-prev::after:hover {
+
+  background-color: #A65CF0;
+  color: #FFFFFF;
+}
+.slider-button-prev {
+  margin-right: 12px;
+}

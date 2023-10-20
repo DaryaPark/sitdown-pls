@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/svg/favicon.svg" type="image/svg">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <header class="catalog-header">
+      @include('html/header.html')
+    </header>
+    <main class="main">
+      <nav class="breadcrumbs catalog-breadcrumbs container">
+        <ul class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="breadcrumbs__link" itemprop="item" href="index.html">
+              <span itemprop="name">Главная</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>
+
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="breadcrumbs__link" itemprop="item" href="catalog.html">
+              <span itemprop="name">Каталог</span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </li>
+
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="breadcrumbs__link" itemprop="item" href="catalog.html">
+              <span itemprop="name">Диваны</span>
+            </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a class="breadcrumbs__link breadcrumbs__link--current" onclick="return false" itemprop="item" href="">
+              <span itemprop="name">Прямые диваны</span>
+            </a>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ul>
+      </nav>
+      <section class="catalog grid-container container">
+        @include('html/catalog-filter.html')
+        @include('html/catalog-teg.html')
+        @include('html/catalog-goods.html')
+      </section>
+    </main>
+    <footer class="footer">
+      @include('html/footer.html')
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

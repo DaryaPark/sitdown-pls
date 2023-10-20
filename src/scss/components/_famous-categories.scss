@@ -1,0 +1,140 @@
+// Категории
+.famous-categories {
+  margin-bottom: 64px;
+}
+
+.famous-categories-item {
+  border-radius: 10px;
+}
+
+.famous-categories-item:nth-child(n+3) {
+  grid-column: 4 span;
+  grid-row: 2;
+}
+
+.famous-categories-item:nth-child(-n+2) {
+  grid-column: 6 span;
+  grid-row: 1;
+}
+
+.famous-categories-item-grid {
+  height: 100%;
+  gap: 16px 30px;
+  grid-auto-flow: row;
+  display: grid;
+  align-self: center;
+  grid-template-rows: 44px 41px auto 68px;
+  grid-template-columns: repeat(auto-fit, minmax(34px, 1fr));
+}
+
+
+.famous-categories-grid-item {
+  grid-column: 6 span;
+}
+
+.famous-categories-img-wrapper {
+  grid-column: 5 span;
+  grid-row: 3;
+}
+
+.famous-categories-item-heading {
+  grid-row: 2;
+  padding-left: 30px;
+}
+
+.famous-categories-img-wrapper-2 {
+  grid-column: 4 span;
+  grid-row: 3;
+}
+
+.--grid-item-btn {
+  grid-row: 4;
+}
+
+.famous-categories-container {
+  grid-row: 1;
+  padding-top: 27px;
+}
+
+
+.famous-categories-list {
+  gap: 31px 33px;
+  grid-template-columns: repeat(12, 1fr);
+
+}
+
+.famous-categories-filter-btn {
+  @include gray-text14px();
+}
+
+.famous-categories-filter-container {
+  display: grid;
+  grid-template-rows: initial;
+  grid-auto-flow: column;
+  gap: 30px;
+  justify-content: start;
+}
+
+.padding-grid {
+  padding-left: 30px;
+}
+
+.famous-categories-btn::after {
+  @include arrow();
+  position: relative;
+  width: 22px;
+  height: 22px;
+  margin-left: 5px;
+}
+
+.famous-categories-btn {
+  @include violet-text16px();
+  margin-top: auto;
+  font-weight: 700;
+  display: flex;
+  text-decoration: 2px underline transparent;
+  transition:  text-decoration-color .3s ease-in ;
+}
+
+.card-info__btn-add {
+  transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+.famous-categories-btn:hover,
+.card-info__btn-add:hover{
+  text-decoration-color: #A65CF0;
+  color: #C998FB;
+}
+
+.famous-categories-btn:focus,
+.card-info__btn-add:focus {
+  text-decoration-color: #A65CF0;
+  color: #C998FB;
+}
+
+.famous-categories-btn:active,
+.card-info__btn-add:active {
+  text-decoration-color: #7033AC;
+  color: #7033AC;
+}
+
+
+.famous-categories-button {
+  display: flex;
+  height: 22px;
+  top: -10px;
+  position: relative;
+  align-self: center;
+  align-items: center;
+}
+
+.famous-categories-picture{
+  display: inline-flex;
+  height: auto;
+}
+
+.famous-categories-picture-img {
+  width: auto;
+  max-height: 202px;
+}
+

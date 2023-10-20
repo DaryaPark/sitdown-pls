@@ -1,0 +1,104 @@
+
+.catalog-header {
+margin-bottom: -12px;
+
+@include tablet {
+  margin-bottom: -11px;
+}
+
+@include small-tablet {
+  margin-bottom: -9px;
+}
+}
+
+.cooperation-header {
+margin-bottom: -9px;
+
+@include big-desktop {
+  margin-bottom: -13px;
+}
+
+@include mobile {
+  margin-bottom: 0;
+}
+}
+
+.card-header {
+  margin-bottom: -12px;
+
+  @include tablet {
+    margin-bottom: -11px;
+  }
+
+  @include small-tablet {
+    margin-bottom: -5px;
+  }
+  }
+
+.breadcrumbs{
+  margin-bottom: 24px;
+
+  @include big-desktop {
+    margin-bottom: 31px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+
+      &::after {
+        @include gray-text14px ();
+
+        content: "/";
+        position: absolute;
+        right: -12px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+    }
+  }
+  &__link {
+    @include gray-text14px ();
+
+    &--current{
+      color: #7033AC;
+      cursor: auto;
+    }
+  }
+}
+.catalog-breadcrumbs{
+  margin-bottom: 27px;
+
+  @include big-desktop {
+    margin-bottom: 31px;
+  }
+
+  @include tablet {
+    margin-bottom: 34px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+}
+
+.card-breadcrumbs {
+  margin-bottom: 28px;
+}
+
+.cooperation-breadcrumbs {
+  margin-bottom: 29px;
+}

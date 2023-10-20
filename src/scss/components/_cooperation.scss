@@ -1,0 +1,208 @@
+.space {
+  display: flex;
+  margin-bottom: 30px;
+
+  @include big-desktop {
+    margin-bottom: 26px;
+  }
+}
+
+.cooperation-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 181%;
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 178%;
+  }
+}
+
+.cooperation-item {
+  display: flex;
+}
+
+.cooperation {
+  margin-bottom: 65px;
+
+  &__heading {
+    margin-bottom: 34px;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 12px;
+    stroke: #FF862F;
+    stroke-width:2px ;
+    fill: none;
+
+    @include mobile {
+      margin-right: 15px;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 46px;
+  }
+}
+
+.coopiration-faq {
+  margin-bottom: 36px;
+
+  @include mobile {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  &__text {
+    max-width: 582px;
+    line-height: 150%;
+
+    @include mobile {
+      width: 100%;
+    }
+}
+
+&__item:not(:last-child){
+  margin-bottom: 12px;
+}
+
+}
+
+.cooperation-provider {
+  margin-bottom: 34px;
+
+  &__title {
+    margin-bottom: 15px;
+    margin-top: 0;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+}
+
+.cooperation-provider-text {
+  max-width: 841px;
+}
+.cooperation-advantages {
+  margin-bottom: 34px;
+
+  @include mobile {
+    margin-bottom: 36px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+
+  &__sub-title {
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FF862F;
+    margin-bottom: 14px;
+  }
+}
+
+.cooperation-guarantee {
+  margin-bottom: 30px;
+
+  @include mobile {
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    counter-reset: li;
+  }
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+    counter-increment: li;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+
+      @include mobile {
+        margin-bottom: 13px;
+      }
+    }
+  }
+
+  &__item::before {
+    content: counter(li) '.';
+    color:#FF862F;
+    display: inline-block;
+    width: 1em;
+    margin-right: 10px;
+
+    @include mobile {
+      margin-right: 12px;
+    }
+  }
+  &__title {
+    margin-bottom: 16px;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    max-width: 810px;
+  }
+}
+
+.cooperation-inform {
+  display: flex;
+  align-items: center;
+
+
+  &::before {
+  @include for-background();
+  display: flex;
+  content: '';
+  width: 77px;
+  height: 120px;
+  margin-right: 32px;
+  background-image: url(../img/pen.png);
+
+  @include tablet {
+    margin-right: 32px;
+  }
+
+  @include mobile {
+    margin-right: 13px;
+  }
+  }
+
+  &__text {
+    max-width: 520px;
+    line-height: 150%;
+
+    @include tablet {
+      max-width: 506px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}

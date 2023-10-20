@@ -1,0 +1,506 @@
+.catalog-filters{
+  height: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  &__heading {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 14px;
+
+    @include big-desktop {
+      font-size: 14px;
+    }
+  }
+
+  &__heading-desk {
+ display: block;
+  @include big-desktop {
+    display: none;
+  }
+  }
+
+
+&__heading-lapt {
+display: none;
+
+@include big-desktop {
+display: block;
+}
+}
+
+&__item {
+  @include big-desktop {
+    position: relative;
+    grid-column: 2 span;
+      // grid-row: 1;
+
+    &:nth-child(2) {
+      grid-column: 1 span;
+      margin-bottom: 0;
+      align-self: center;
+
+      @include tablet {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+  }
+
+
+  @include tablet {
+    grid-column: 3 span;
+
+    &:nth-child(2) {
+      grid-column: 6 span;
+      grid-row: 1;
+    }
+
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      grid-row: 2;
+    }
+
+    &:nth-last-child(-n+3) {
+      grid-row: 3;
+    }
+
+  }
+
+  @include mobile {
+    grid-column: 3 span;
+  }
+}
+}
+
+.catalog-filter {
+margin-bottom: 17px;
+
+&:nth-child(6){
+  margin-bottom: 90px;
+}
+
+@include big-desktop {
+  margin-bottom: 0;
+
+  &:nth-child(6){
+    margin-bottom: 0;
+  }
+
+}
+
+&__items {
+  @include big-desktop {
+  padding:26px 15px  26px 15px;
+  }
+}
+
+&__top {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #666666;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color .3s ease-in-out, z-index .3s ease-in-out;
+
+  @include big-desktop {
+    font-weight: 400;
+    padding: 8px 14px;
+    border: 2px solid transparent;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+  }
+  }
+
+&__top-price{
+  padding-bottom: 5px;
+
+  @include big-desktop {
+    padding: 9px 15px;
+  }
+}
+
+&__slider {
+  height: 3px;
+  background-color: #EAEAEA;
+  border-radius: 3px;
+  position: relative;
+}
+
+&__progress{
+  height: 3px;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  background-color: #A65CF0;
+  border-radius: 3px;
+}
+
+&__top-discount {
+  padding-top: 22px;
+
+  @include big-desktop {
+    padding: 9px 15px;
+  }
+  @include mobile {
+    padding: 9px 15px;
+  }
+}
+
+.catalog-filter__bottom--open {
+    @include big-desktop {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .catalog-filter__toggle {
+    transform: rotate(0deg);
+    transition: transform .3s ease-in-out;
+  }
+
+  &__top--active {
+    border-color:#7033AC;
+    z-index: 20;
+    .catalog-filter__toggle {
+      transform: rotate(180deg);
+    }
+  }
+
+
+  &__bottom {
+    @include big-desktop{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 0;
+    width: 100%;
+    top: 35px;
+    z-index: 10;
+    transition: opacity .300s ease-in-out, visibility .300s ease-in-out ;
+
+    @include big-desktop {
+      border: 1px solid #EAEAEA;
+
+    }
+  }
+}
+  &__toggle {
+    @include big-desktop{
+    background-image: url(../img/arrow-t.png);
+    width: 13px;
+    height: 8px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
+
+.select {
+  @include text16px ();
+
+ color: #666666;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  &__field {
+    @include text16px();
+
+    display: flex;
+    align-items: center;
+    color: #666666;
+
+    span {
+      margin-right: 10px;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &__input {
+    @include text16px ();
+    color: #666666;
+    max-width: 86px;
+    outline: none;
+    height: 30px;
+    border: 1px solid #666666;
+    text-align: center;
+    -moz-appearance: textfield;
+  }
+}
+
+
+
+.catalog-custom-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+
+  @include tablet {
+    margin-bottom: 20px;
+    line-height: 120%;
+  }
+  &__text {
+    display: flex;
+    position: relative;
+    padding-left: 32px;
+    height: 22px;
+    transition: color .3s ease-in-out, border-color .3s ease-in-out, background .3s ease-in-out;
+
+    @include small-tablet {
+      align-items: center;
+      height: 15px;
+      padding-left: 23px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 1px solid #999999;
+      border-radius: 2px;
+      width: 20px;
+      height: 20px;
+      transition: border-color .3s ease-in-out;
+
+      @include small-tablet {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &::after {
+      @include for-background();
+      width: 20px;
+      height:20px;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      background-image: url(../../img/chekbox.png);
+      border-radius: 2px;
+      opacity: -1;
+      transition: opacity .3s ease-in-out;
+
+      @include small-tablet {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+    }
+  }
+
+  &__input {
+    &:checked + span {
+      color: #7033AC;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+// Цена
+
+// Цена
+// price-range
+
+// скрыть стрелки у инпута---------------------------
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+// -----------------------------------------------------
+
+.filter-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include big-desktop {
+    justify-content: center;
+  }
+
+    &__label {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    &__text{
+        margin-right: 9px;
+    }
+
+    &__input {
+      width: 86px;
+      height: 30px;
+      padding: 0 12px;
+
+      @include big-desktop {
+        width: 100%;
+      }
+    }
+
+}
+
+.filter-price-slider {
+  width: calc(100% - 4px);
+
+  @include big-desktop {
+    display: none;
+  }
+}
+// изменение самого слайдера цены
+
+// цвет задника у range
+.noUi-target {
+  background-color: #EAEAEA;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  height: 3px;
+}
+
+// цвет выбранной линии range
+.noUi-connect {
+  background-color: #A65CF0;
+  transition: background .3s ease-in-out;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+display: none;
+}
+
+
+.noUi-handle {
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 7px solid transparent;
+  border-bottom: 13px solid #A65CF0;
+}
+
+.noUi-horizontal .noUi-handle {
+width: 13px;
+height: 13px;
+top: -6px;
+}
+// ----------------------------------------
+
+.noUi-horizontal .noUi-handle-upper {
+  right: -9px;
+}
+
+.noUi-horizontal .noUi-handle {
+right:-8px;
+}
+
+.noUi-handle:hover {
+  border-bottom-color: #C998FB;
+}
+
+.noUi-handle:focus {
+  border-bottom-color: #7033AC;
+}
+
+.noUi-handle:focus {
+  border-bottom-color: #A65CF0;
+}
+
+// баннер
+
+.go-catalog {
+  background-color: #333333;
+  border-radius: 10px;
+  @include big-desktop{
+    display: none
+  }
+  &__banner {
+    @include for-background();
+
+    height: 191px;
+    background-image: url(../img/filter-banner.jpg);
+    border-radius: 10px 10px 0 0;
+    background-position: top;
+  }
+
+  &__content {
+    padding: 30px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 20px;
+  }
+}
+
+.catalog-filter__item:focus.catalog-custom-checkbox__text,
+
+.catalog-custom-checkbox__text:hover {
+  color: #A65CF0;
+}
+
+.catalog-custom-checkbox__text:active {
+  color: #7033AC;
+}
+
+.catalog-custom-checkbox__text:hover::before {
+  color: #A65CF0;
+  border-color: #A65CF0;
+}
+
+.filter-price__label input:focus {
+  background-color: #EBD1FF;
+  border-color: #A65CF0;
+}
+
+
+.filter-price__label input:active {
+  background-color: transparent;
+  border-color: #7033AC;
+}

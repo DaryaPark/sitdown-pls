@@ -1,0 +1,201 @@
+<div class="catalog__grid-item">
+  <div class="catalog-filters grid-container">
+    <h3 class="catalog-filters__item heading catalog-filters__heading catalog-filters__heading-desk">Фильтровать по:</h3>
+    <h3 class="catalog-filters__item catalog-filters__heading catalog-filters__heading-lapt">Фильтры</h3>
+    <!-- категории -->
+    <div class="catalog-filters__item catalog-filter catalog-filter-categories">
+      <button class="catalog-filter__top">
+        Категория
+        <span class="catalog-filter__toggle"></span>
+      </button>
+      <div class="catalog-filter__bottom">
+        <ul class="catalog-filter__items">
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-categori  visually-hidden" data-target="Диваны" aria-label="Выбрать Диван">
+              <span class="catalog-custom-checkbox__text">Диваны</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-categori visually-hidden" data-target="Кресла" aria-label="Выбрать Кресло">
+              <span class="catalog-custom-checkbox__text">Кресла</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-categori visually-hidden" data-target="Пуфы" aria-label="Выбрать Пуфы">
+              <span class="catalog-custom-checkbox__text">Пуфы</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-categori visually-hidden" data-target="Кровати" aria-label="Выбрать Кровати">
+              <span class="catalog-custom-checkbox__text" data-target="Кровати">Кровати</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input visually-hidden" data-target="Тумбы" aria-label="Выбрать Тумбы">
+              <span class="catalog-custom-checkbox__text">Тумбы</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-categori visually-hidden" data-target="Комоды" aria-label="Выбрать Комоды">
+              <span class="catalog-custom-checkbox__text">Комоды</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-categori visually-hidden" data-target="Стулья"  aria-label="Выбрать Стулья">
+              <span class="catalog-custom-checkbox__text">Стулья</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-categori visually-hidden" data-target="Столы" aria-label="Выбрать Столы">
+              <span class="catalog-custom-checkbox__text">Столы</span></label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-categori visually-hidden" data-target="Аксессуары" aria-label="Выбрать Аксессуары">
+              <span class="catalog-custom-checkbox__text">Аксессуары</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Фильтр цена -->
+    <div class="catalog-filters__item catalog-filter catalog-filter-price">
+      <button class="catalog-filter__top catalog-filter__top-price">
+        Цена
+        <span class="catalog-filter__toggle"></span>
+      </button>
+      <div class="catalog-filter__bottom">
+        <div class="catalog-filter__items">
+          <div class="filter-price">
+            <label class="filter-price__label">
+              <span class="filter-price__text">от</span>
+              <input type="number" min="1000" max="150000" class="filter-price__input filter-price__input-0"
+                placeholder="2000" id="input-0">
+            </label>
+            <label class="filter-price__label">
+              <span class="filter-price__text">до</span>
+              <input type="number" min="1000" max="150000" class="filter-price__input filter-price__input-1"
+                placeholder="150000" id="input-1">
+            </label>
+          </div>
+          <div class="filter-price-slider" id="range-slider"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- фильтр скидка -->
+
+    <div class="catalog-filters__item catalog-filter catalog-filter-discount">
+      <button class="catalog-filter__top catalog-filter__top-discount">
+        Скидка
+        <span class="catalog-filter__toggle"></span>
+      </button>
+      <div class="catalog-filter__bottom">
+        <ul class="catalog-filter__items">
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-discount visually-hidden"  data-value="Более 5 000" aria-label="Выбрать скидку более 5000">
+              <span class="catalog-custom-checkbox__text">Более 5&nbsp;000</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-discount visually-hidden"  data-value="Менее 5 000" aria-label="Выбрать скидку менее 5000">
+              <span class="catalog-custom-checkbox__text">Менее 5&nbsp;000</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-discount visually-hidden"  data-value="Без скидки" aria-label="Выбрать Скидка не важно">
+              <span class="catalog-custom-checkbox__text">Не важно</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- фильр цвет -->
+    <div class="catalog-filters__item catalog-filter catalog-filter-color">
+      <button class="catalog-filter__top">
+        Цвет
+        <span class="catalog-filter__toggle"></span>
+      </button>
+      <div class="catalog-filter__bottom">
+        <ul class="catalog-filter__items">
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-color  visually-hidden" data-color="Коричневый" aria-label="Выбрать цвет коричневый">
+              <span class="catalog-custom-checkbox__text">Коричневый</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-color visually-hidden" data-color="Черный" aria-label="Выбрать цвет Черный">
+              <span class="catalog-custom-checkbox__text">Черный</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-color visually-hidden" data-color="Бежевый" aria-label="Выбрать цвет Бежевый">
+              <span class="catalog-custom-checkbox__text">Бежевый</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-color visually-hidden" data-color="Серый" aria-label="Выбрать цвет Серый">
+              <span class="catalog-custom-checkbox__text">Серый</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-color visually-hidden" data-color="Белый" aria-label="Выбрать цвет Белый">
+              <span class="catalog-custom-checkbox__text">Белый</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-color visually-hidden" data-color="Синий" aria-label="Выбрать цвет Синий">
+              <span class="catalog-custom-checkbox__text">Синий</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-color visually-hidden" data-color="Оранжевый" aria-label="Выбрать цвет оранжевый">
+              <span class="catalog-custom-checkbox__text">Оранжевый</span>
+            </label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-color visually-hidden" data-color="Желтый" aria-label="Выбрать цвет желтый">
+              <span class="catalog-custom-checkbox__text">Желтый</span></label>
+          </li>
+          <li class="catalog-filter__item">
+            <label class="catalog-custom-checkbox">
+              <input type="checkbox" class="catalog-custom-checkbox__input catalog-custom-checkbox__input-color visually-hidden" data-color="Зеленый" aria-label="Выбрать цвет зеленый">
+              <span class="catalog-custom-checkbox__text">Зеленый</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="go-catalog">
+      <div class="go-catalog__banner"></div>
+      <div class="go-catalog__content">
+        <h2 class="sta-block-title go-catalog__title">Оксфорд 1950</h2>
+        <h3 class="sta-block-subtitle go-catalog__subtitle">Новая коллекция изысканных кресел</h3>
+        <button class="famous-categories-btn go-catalog__btn">
+          <span class="famous-categories-btn-text go-catalog__btn-text">В каталог</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

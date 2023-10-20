@@ -1,0 +1,37 @@
+ <div class="graph-modal__container modal-form" role="dialog" aria-modal="true" data-graph-target="modal-form">
+  <button class="btn-reset graph-modal__close js-modal-close prod-modal-close" aria-label="Закрыть модальное окно"></button>
+  <div class="graph-modal__content">
+    <!-- контент модального окна -->
+    <div class="modal-form__form-container">
+      <h2 class="heading modal-form__title">Купить в один клик</h2>
+    <span class="modal-form__text">Чтобы оформить заказ&nbsp;&mdash; заполните формы ниже и&nbsp;наш менеджер свяжется с&nbsp;вами в&nbsp;течении часа.</span>
+    <form action="mail.php" enctype="multipart/form-data" method="POST" class="form modal-form__form">
+      <input type="hidden" name="admin_email[]" value="koreyanka.pak@gmail.com">
+      <label class="modal-form__lable form-label">
+        <input id="name" class="modal-form__input form-input input-name-1" placeholder="Как вас зовут?" name="name" type="text"
+          data-validate-field="name" autocomplete="off">
+      </label>
+      <label class="modal-form__lable form-label">
+      <input id="phone" class="modal-form__input form-input input-tel-1" type="tel" data-validate-field="tel" name="phone"
+          placeholder="Ваш телефон" autocomplete="off">
+      </label>
+      <button type="submit" class="modal-form__btn button fos-btn" id="nextStep">Отправить</button>
+      <label class="modal-form__checkbox form-label-checkbox">
+        <input type="checkbox" required class="modal-form__checkbox-input form-label-checkbox__input visually-hidden">
+        <span class="modal-form__checkbox-text form-label-checkbox__text">
+        Принимаю
+        <a href="#">пользовательское соглашение</a>
+        </span>
+      </label>
+    </form>
+    </div>
+    <!-- thanks page -->
+    <div id="thank_you" class="modal-form__after-form">
+      <picture class="modal-form__picture">
+        <source srcset="/img/card/thanks-form.png" media="(max-width:1000px)">
+        <img tabindex="0" src="img/card/thanks-form.png" alt="Спасибо мы вам перезвоним">
+      </picture>
+      <h2 class="heading modal-form__heaing">Спасибо мы вам перезвоним!</h2>
+    </div>
+  </div>
+</div>
